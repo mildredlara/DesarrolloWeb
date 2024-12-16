@@ -1,0 +1,264 @@
+body {
+   
+    text-align: center; /* Centra todo el contenido */
+    margin: 0;
+    padding: 0;
+    background-color:  #D3C7CF; /*#B89AAE*/
+
+}
+p {
+    font-size: 26px;
+    color: #5f4a78;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+
+/*títulos de todas las páginas*/
+h1 {
+    background-image: url('../imagenes/fondo.webp'); /* Sube un nivel para encontrar la carpeta imagenes */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center;
+    font-size: 42px;
+    font-weight: bolder;
+    font-family: monospace;
+    color: #6B577E;
+    text-align: center;
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 20px 0;
+}
+
+.recipe-section {
+    background-image: url('../imagenes/fondo.webp'); /* Sube un nivel para encontrar la carpeta imagenes */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* Centra la imagen */
+    padding: 20px; /* Espaciado interno para el contenido */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    color: black; 
+}
+
+.recipe-section h2{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+
+}
+
+.recipe-section h3{
+    font-size: 22px;
+    text-align: left;
+    font-family: monospace;
+}
+.recipe-section p{
+    font-size: 18px;
+    text-align: left;
+    font-family: monospace;
+}
+
+.tips-section{
+    background-image: url('../imagenes/white-waves.webp'); /* Sube un nivel para encontrar la carpeta imagenes */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* Centra la imagen */
+    padding: 20px; /* Espaciado interno para el contenido */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    color: black; 
+}
+
+/* Contenedor de la lista */
+.recipe-section ul, .recipe-section ol {
+    margin: 0 auto; /* Centra la lista horizontalmente */
+    text-align: center; /* Alinea el contenido de la lista */
+    display: block; /* Asegura que sea tratado como un bloque */
+}
+
+/* Estilo de los elementos de la lista */
+.recipe-section ul li, .recipe-section ol li {
+    
+    margin: 5px 0; /* Espaciado entre elementos */
+    font-family: monospace;
+    font-size: 18px;
+    color: black;
+    text-align: left; /* Centra el texto de cada elemento */
+}
+
+
+.recipe-section iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 400px;
+    height: 300px; /* Alto fijo en píxeles */
+}
+
+.tips-section ul, .tips-section ol{
+    margin: 0 auto; /* Centra la lista horizontalmente */
+    text-align: center; /* Alinea el contenido de la lista */
+    display: block; /* Asegura que sea tratado como un bloque */
+
+}
+
+.tips-section ul li, .tips-section ol li {
+    margin: 5px 0; /* Espaciado entre elementos */
+    font-family: monospace;
+    font-size: 18px;
+    color: black;
+    text-align: left; /* Centra el texto de cada elemento */
+}
+.footer-links {
+    display: flex; /* Alinea los enlaces en una fila */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 15px; /* Espacio entre los enlaces */
+    padding: 20px 0;
+    font-size: 16px;
+    color: #6B577E;
+    font-family: monospace; /* Fuente de los enlaces */
+}
+
+.recipe-card {
+    margin: 20px auto; /* Espaciado entre tarjetas */
+    padding: 15px;
+    width: 320px; /* Define un ancho fijo para las tarjetas */
+    background-image: url('../imagenes/fondo.webp'); /* Sube un nivel para encontrar la carpeta imagenes */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    display: flex;
+    flex-direction: column; /* Acomoda imagen y enlace verticalmente */
+    align-items: center; /* Centra el contenido */
+}
+
+/* Estilo para las imágenes */
+.recipe-img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 200px; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Redondea las esquinas */
+    margin-bottom: 10px; /* Espaciado debajo de la imagen */
+}
+
+/* Estilo para los enlaces */
+.recipe-link {
+    font-size: 18px;
+    color: #7B6D99;
+    text-decoration: none; /* Elimina subrayado */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efecto de transición */
+}
+
+/* Hover para los enlaces */
+.recipe-link:hover {
+    color: #7454B7; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilo del footer */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.tips-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+.tips-section h1 {
+    font-size: 36px;
+    color: #4c3c63;
+    margin-bottom: 10px;
+    background: none; /* Asegura que no tenga fondo */
+    box-shadow: none; /* Elimina posibles sombras */
+    padding: 0;
+}
+
+/* Subtítulo */
+.tips-section h2 {
+    font-size: 20px;
+    color: #5f4a78;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de tips */
+.tip-card {
+    background-color: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    padding: 15px;
+    max-width: 800px;
+    text-align: left; /* Alinea texto dentro de la tarjeta */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icono dentro de las tarjetas */
+.tip-card p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+/* Sección del formulario */
+/* Estilo para la sección del formulario */
+.contact-form {
+    max-width: 800px; /* Ancho máximo mayor */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 40px; /* Espaciado interno mayor */
+    background-image: url('../imagenes/watercolor.webp'); /* Fondo con la imagen */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* Centra la imagen */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más visible */
+    text-align: left; /* Alinea el contenido del formulario */
+    min-height: 500px; /* Altura mínima */
+}
+
+/* Campos del formulario */
+.contact-form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4c3c63;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%; /* Ancho completo */
+    padding: 15px; /* Más espacio interno */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Área de texto */
+.contact-form textarea {
+    resize: vertical; /* Permite ajustar solo verticalmente */
+    height: 150px; /* Altura mayor */
+}
+
+/* Botón de enviar */
+.contact-form input[type="submit"] {
+    background-color: #4c3c63;
+    color: white;
+    border: none;
+    padding: 12px 30px; /* Botón más grande */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px; /* Fuente más grande */
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #3a2c4d;
+}
