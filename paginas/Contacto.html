@@ -7,38 +7,44 @@
     <title>Contacto</title>
 </head>
 <body>
-    <h1>Contacto</h1>
-    <p>Si tiene alguna duda o comentario deje sus datos y nos contactaremos con usted.</p>
-    
-   
-    <!-- Sección del Formulario -->
-    <section class="contact-form">
-        <form action="/submit" method="post">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" name="Nombre" id="nombre"><br><br>
-            
-            <label for="correo">Correo:</label><br>
-            <input type="email" name="correo" id="correo"><br><br>
-            
-            <label for="celular">Teléfono celular:</label><br>
-            <input type="tel" name="celular" id="celular"><br><br>
-            
-            <label for="comentario">Duda o comentario:</label><br>
-            <textarea name="comentario" id="comentario"></textarea><br><br>
-            
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
+    <!-- Título de la página -->
+    <header>
+        <h1>Contacto</h1>
+    </header>
 
+    <!-- Sección principal -->
+    <main>
+        <p>Si tiene alguna duda o comentario, deje sus datos y nos contactaremos con usted.</p>
+        
+        <!-- Formulario de contacto -->
+        <section class="contact-form">
+            <form action="/submit" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" id="correo" placeholder="Ingrese su correo" required>
+                
+                <label for="celular">Teléfono celular:</label>
+                <input type="tel" name="celular" id="celular" placeholder="Ingrese su número" required>
+                
+                <label for="comentario">Duda o comentario:</label>
+                <textarea name="comentario" id="comentario" placeholder="Escriba su mensaje aquí" required></textarea>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
 
-    <br><br><br>
+    <!-- Navegación del footer -->
     <nav class="footer-links">
         <a href="../index.html">Regresar al inicio</a>
-        <a href="RecetasDulces.html">Revisar las recetas dulces</a>
-        <a href="RecetasSaladas.html">Ir a la página de recetas saladas</a>
-        <a href="TipsDeCocina.html">Ir a la página de tips de cocina</a>
-        
+        <a href="recetasDulces.html">Revisar las recetas dulces</a>
+        <a href="recetasSaladas.html">Ir a la página de recetas saladas</a>
+        <a href="tipsDeCocina.html">Ir a la página de tips de cocina</a>
     </nav>
+
+    <!-- Pie de página -->
     <footer>La mejor página de cocina.</footer>
 </body>
 </html>
