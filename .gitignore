@@ -1,0 +1,5 @@
+# Ignorar la carpeta DPW
+DPW/
+
+# Ignorar cualquier archivo con extensión .map
+*.map
