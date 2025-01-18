@@ -1,461 +1,285 @@
-/* =========================================
-   Root Variables
-   ========================================= */
-   :root {
-    --primary-color: #4c3c63;
-    --secondary-color: #5f4a78;
-    --light-color: #ffffff;
-    --background-color: #D3C7CF;
-    --border-radius: 8px;
-    --font-family: 'Monospace', sans-serif;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* =========================================
-   Global Styles
-   ========================================= */
 body {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    font-family: var(--font-family);
-}
-
-p {
-    font-size: 1.6rem;
-    color: var(--secondary-color);
-    margin-bottom: 2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #D3C7CF;
+  font-family: "Monospace", sans-serif;
 }
 
 h1 {
-    background-image: url('../imagenes/fondo.webp');
-    background-size: cover;
-    background-position: center;
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: #6B577E;
-    padding: 1rem 2rem;
-    margin: 2rem 0;
-}
-/* =========================================
-   Recipe Container with Grid
-   ========================================= */
-   .recipe-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  color: #4c3c63;
 }
 
-.recipe-card {
-    background-color: var(--light-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    padding: 10px;
-    overflow: hidden;
-    transition: transform 0.2s ease-in-out;
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.recipe-container .recipe-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+.recipe-container .recipe-card:hover {
+  transform: scale(1.05);
+}
+.recipe-container .recipe-card .recipe-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.recipe-container .recipe-card .recipe-content {
+  text-align: left;
+}
+.recipe-container .recipe-card .recipe-content .recipe-link {
+  font-size: 1.2rem;
+  color: #4c3c63;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.recipe-container .recipe-card .recipe-content .recipe-link:hover {
+  color: #5f4a78;
+}
+.recipe-container .recipe-card .recipe-content .recipe-description {
+  font-size: 1rem;
+  color: #5f4a78;
+  margin: 10px 0;
 }
 
-.recipe-card:hover {
-    transform: scale(1.05);
-}
-
-.recipe-img {
-    width: 100%;
-    height: 150px;
-    border-radius: var(--border-radius);
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.recipe-link {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.recipe-link:hover {
-    color: var(--secondary-color);
-}
-
-/* =========================================
-   Recipe Section Styles
-   ========================================= */
 .recipe-section {
-    background-image: url('../imagenes/fondo.webp');
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    color: black;
-    margin-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
 }
-
 .recipe-section h2 {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-    color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4c3c63;
+  margin-bottom: 15px;
 }
-
-.recipe-section h3 {
-    font-size: 1.4rem;
-    text-align: left;
-}
-
-.recipe-section p, .recipe-section ul li, .recipe-section ol li {
-    font-size: 1.2rem;
-    text-align: left;
-    margin: 0.5rem 0;
-    color: black;
-}
-
-.recipe-section ul, .recipe-section ol {
-    margin: 0 auto;
-    padding-left: 1.5rem;
-    text-align: left;
-}
-
 .recipe-section iframe {
-    display: block;
-    margin: 1.5rem auto;
-    border-radius: var(--border-radius);
-    max-width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+.recipe-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5f4a78;
+  margin: 20px 0 15px;
+}
+.recipe-section p {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 10px;
+}
+.recipe-section ul, .recipe-section ol {
+  margin: 10px 0 20px;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: black;
+}
+.recipe-section ul li, .recipe-section ol li {
+  margin-bottom: 5px;
+}
+.recipe-section ol {
+  list-style-type: decimal;
+}
+.recipe-section ul {
+  list-style-type: disc;
 }
 
-/* Responsive Design */
-
-/* iPhone (Max width: 428px) */
-@media (max-width: 428px) {
-    h1 {
-        font-size: 1.8rem;
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .recipe-section {
-        padding: 1rem;
-        margin: 0.5rem;
-        border-radius: 8px;
-        background-color: #5f4a78;;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .recipe-section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .recipe-section h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .recipe-container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 1rem;
-    }
-
-    .recipe-card {
-        padding: 10px;
-    }
-
-    .recipe-img {
-        height: 120px;
-    }
-}
-
-/* iPad (Max width: 768px) */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .recipe-section {
-        padding: 1.5rem;
-        margin: 1rem;
-        border-radius: 10px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .recipe-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    .recipe-section h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-    }
-
-    .recipe-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 1.5rem;
-    }
-
-    .recipe-card {
-        padding: 15px;
-    }
-
-    .recipe-img {
-        height: 150px;
-    }
-}
-
-/* =========================================
-   Tips Section Styles
-   ========================================= */
-.tips-section {
-    background-color: var(--light-color);
-    border-radius: var(--border-radius);
-    margin: 2rem auto;
-    max-width: 900px;
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    text-align: center;
-}
-
-.tips-section h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.tips-section h2 {
-    font-size: 1.6rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-}
-
-/* Tips Cards */
-.tip-card {
-    background-color: var(--light-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin: 1rem auto;
-    padding: 1rem;
-    max-width: 800px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.tip-card p {
-    font-size: 1.2rem;
-    color: #333;
-    line-height: 1.6;
-}
-/* Responsive Design */
-@media (max-width: 428px) {
-    .tips-section {
-        padding: 1rem;
-    }
-
-    .tips-section h1 {
-        font-size: 1.6rem;
-    }
-
-    .tip-card {
-        flex-direction: column;
-        gap: 10px;
-        padding: 1rem;
-    }
-
-    .tip-card p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .tips-section {
-        padding: 1.5rem;
-    }
-
-    .tips-section h1 {
-        font-size: 2rem;
-    }
-
-    .tip-card {
-        flex-direction: row;
-        gap: 15px;
-        padding: 1.5rem;
-    }
-
-    .tip-card p {
-        font-size: 1.2rem;
-    }
-}
-
-/* =========================================
-   Contact Form Styles - Actualizado
-   ========================================= */
-   .contact-form {
-    max-width: 600px; /* Define el ancho máximo del formulario */
-    margin: 20px auto; /* Centra el formulario horizontalmente */
-    padding: 20px;
-    background-color: var(--light-color); /* Fondo blanco */
-    border-radius: var(--border-radius); /* Bordes redondeados */
-    box-shadow: var(--box-shadow); /* Sombra externa */
-    text-align: left;
-}
-
-.contact-form label {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 8px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 90%; /* Asegura que el campo ocupe todo el ancho */
-    padding: 15px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espaciado inferior */
-    border: 1px solid #ccc; /* Borde sutil */
-    border-radius: var(--border-radius); /* Bordes redondeados */
-    font-size: 1rem;
-    background-color: #f9f9f9; /* Color de fondo claro */
-    box-shadow: none; /* Elimina sombra interna */
-    outline: none; /* Elimina el borde azul del estado `focus` */
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #ccc; /* Borde estándar en el estado `focus` */
-}
-
-.contact-form textarea {
-    resize: vertical; /* Permite solo redimensionar verticalmente */
-    height: 120px; /* Altura inicial */
-}
-
-.contact-form input[type="submit"] {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border: none;
-    padding: 12px 30px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    box-shadow: none; /* Sin sombra */
-}
-
-/* Responsive Design */
-   @media (max-width: 428px) {
-    .contact-form {
-        padding: 1rem;
-        margin: 1rem auto;
-        width: 90%;
-    }
-
-    .contact-form label {
-        font-size: 1rem;
-    }
-
-    .contact-form input, .contact-form textarea {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-
-    .contact-form input[type="submit"] {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-form {
-        padding: 1.5rem;
-        margin: 1.5rem auto;
-        width: 80%;
-    }
-
-    .contact-form label {
-        font-size: 1.2rem;
-    }
-
-    .contact-form input, .contact-form textarea {
-        font-size: 1rem;
-        padding: 12px;
-    }
-
-    .contact-form input[type="submit"] {
-        font-size: 1.2rem;
-        padding: 12px 25px;
-    }
-}
-
-/* =========================================
-   Footer and Navigation Styles
-   ========================================= */
 .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem 0;
-    font-size: 1rem;
-    color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #4c3c63;
 }
-
 .footer-links a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #4c3c63;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
-
 .footer-links a:hover {
-    color: var(--secondary-color);
+  color: #5f4a78;
 }
 
 footer {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--light-color);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
 }
-/* Responsive Design*/
-@media (max-width: 428px) {
-    .footer-links {
-        flex-direction: column; /* Cambiar a orientación vertical */
-        align-items: center; /* Centrar enlaces */
-        gap: 1rem; /* Reducir espacio entre enlaces */
-        padding: 1rem 0; /* Menor espacio interno */
-        font-size: 0.9rem; /* Reducir tamaño de fuente */
-    }
 
-    footer {
-        font-size: 0.8rem; /* Reducir fuente del texto del footer */
-        padding: 0.8rem; /* Reducir padding */
-    }
+@media (max-width: 428px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+  }
 }
 @media (max-width: 768px) {
-    .footer-links {
-        flex-direction: row; /* Mantener orientación horizontal */
-        justify-content: space-evenly; /* Espaciado uniforme entre enlaces */
-        gap: 1rem; /* Reducir espacio entre enlaces */
-        padding: 1.5rem 0; /* Ajustar padding */
-        font-size: 1rem; /* Mantener tamaño de fuente legible */
-    }
-
-    footer {
-        font-size: 0.9rem; /* Mantener fuente del texto del footer */
-        padding: 1rem; /* Ajustar padding */
-    }
+  .footer-links {
+    gap: 1rem;
+  }
+  footer {
+    font-size: 0.9rem;
+  }
 }
+.tips-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tip-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tip-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.tip-card p {
+  font-size: 1rem;
+  color: #4c3c63;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .tips-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+@media (max-width: 428px) {
+  .tips-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .tip-card {
+    padding: 10px;
+  }
+}
+main {
+  text-align: center;
+  padding: 20px;
+}
+main p {
+  font-size: 1.2rem;
+  color: #4c3c63;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4c3c63;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #5f4a78;
+}
+.contact-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+.contact-form input[type=submit] {
+  background-color: #4c3c63;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form input[type=submit]:hover {
+  background-color: #5f4a78;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 15px;
+  }
+  input,
+  textarea {
+    font-size: 0.9rem;
+  }
+  input[type=submit] {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 428px) {
+  .contact-form {
+    padding: 10px;
+  }
+  input,
+  textarea {
+    font-size: 0.8rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
