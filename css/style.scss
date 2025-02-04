@@ -327,9 +327,9 @@ footer {
 
 
 .tips-section {
-    background: none; // ❌ Elimina el fondo blanco
-    box-shadow: none; // ❌ Elimina la sombra
-    padding: 0; // ❌ Reduce el espacio extra
+    background: none; // Elimina el fondo blanco
+    box-shadow: none; // Elimina la sombra
+    padding: 0; // Reduce el espacio extra
     text-align: center;
 }
 
@@ -357,8 +357,8 @@ footer {
     margin: 15px; // Agrega espacio uniforme alrededor de cada tarjeta
 
     &:hover {
-        transform: scale(1.05); // Aumentar ligeramente el tamaño al pasar el mouse
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); // Incrementar la sombra al pasar el mouse
+        transform: scale(1.05); 
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
     }
 
     p {
