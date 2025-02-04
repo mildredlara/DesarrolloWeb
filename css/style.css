@@ -3,26 +3,85 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  padding-top: 80px; /* Ajusta este valor según la altura del navbar */
   background-color: #D3C7CF;
   font-family: "Monospace", sans-serif;
+  padding-top: 100px; /* 🔹 Aumentamos un poco el padding-top */
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4c3c63;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  height: auto;
 }
 
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #5f4a78;
+}
+
+/* 🔹 Ajuste del contenido principal */
 main {
-  flex: 1;
+  padding-top: 50px; /* 🔹 Más espacio para separar del navbar */
+  padding-bottom: 20px;
 }
 
-header {
-  padding-top: 80px; /* Ajusta según la altura del navbar */
+/* 🔹 Ajuste de encabezados */
+h1, h2, h3 {
+  padding-top: 100px; /* 🔹 Separamos los títulos aún más */
 }
 
+/* 🔹 Responsive para pantallas pequeñas (max-width: 428px) */
+@media (max-width: 450px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    height: auto;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  main {
+    padding-top: 120px; /* 🔹 Aumentamos el espacio para evitar solapamiento */
+  }
+  h1, h2, h3 {
+    padding-top: 120px; /* 🔹 Ajuste final para que los títulos sean visibles */
+  }
+}
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -64,54 +123,6 @@ p.fade-in {
   max-width: 800px;
   margin: 20px auto;
   padding: 10px 15px;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #4c3c63;
-  padding: 1rem 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  padding-left: 2rem;
-  height: auto;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  display: flex;
-  gap: 1rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  text-align: left;
-  transition: color 0.3s ease;
-  font-weight: bold;
-  white-space: nowrap;
-  padding: 0 10px;
-}
-
-.nav-links a:hover {
-  color: #5f4a78;
-}
-
-.navbar {
-  min-width: 100vw;
-}
-
-.main-content {
-  margin-top: 70px; /* Ajusta según la altura de la navbar */
 }
 
 @media (max-width: 768px) {
@@ -286,7 +297,8 @@ footer {
 }
 
 .tips-section h1, .tips-section h2 {
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .tips-section h1 {
@@ -324,13 +336,27 @@ footer {
 @media (max-width: 768px) {
   .tips-section {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 10px;
+  }
+  .tips-section h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .tips-section h2 {
+    font-size: 20px;
+    margin-top: 5px;
   }
 }
 @media (max-width: 428px) {
   .tips-section {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+  .tips-section h1 {
+    font-size: 30px;
+  }
+  .tips-section h2 {
+    font-size: 15px;
   }
   .tip-card {
     padding: 10px;

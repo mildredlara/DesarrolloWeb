@@ -10,27 +10,90 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    padding-top: 80px; /* Ajusta este valor según la altura del navbar */
-    background-color: $background-color; 
-    font-family: $font-family; 
+    background-color: $background-color;
+    font-family: $font-family;
+    padding-top: 100px; /* 🔹 Aumentamos un poco el padding-top */
 }
 
-
-
-html, body {
-    height: 100%;
-    margin: 0;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $primary-color;
+    padding: 1rem 2rem;
+    box-shadow: $box-shadow;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: auto;
 }
 
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links a {
+    color: $light-color;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: $secondary-color;
+}
+
+/* 🔹 Ajuste del contenido principal */
 main {
-    flex: 1; // Empuja el footer hacia abajo
+    padding-top: 50px; /* 🔹 Más espacio para separar del navbar */
+    padding-bottom: 20px;
 }
 
-header {
-    padding-top: 80px; /* Ajusta según la altura del navbar */
+/* 🔹 Ajuste de encabezados */
+h1, h2, h3 {
+    padding-top: 100px; /* 🔹 Separamos los títulos aún más */
 }
+
+/* 🔹 Responsive para pantallas pequeñas (max-width: 428px) */
+@media (max-width: 450px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem 1rem;
+        height: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding-top: 120px; /* 🔹 Aumentamos el espacio para evitar solapamiento */
+    }
+
+    h1, h2, h3 {
+        padding-top: 120px; /* 🔹 Ajuste final para que los títulos sean visibles */
+    }
+}
+
 
 @mixin box-style {
     background-color: $light-color; 
@@ -83,54 +146,6 @@ p.fade-in {
     padding: 10px 15px;  
     
 }
-// Estilos para la barra de navegación
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $primary-color;
-    padding: 1rem 2rem;
-    box-shadow: $box-shadow;
-    z-index: 1000;
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center;
-    flex-wrap: nowrap; 
-    overflow: hidden; 
-    padding-left: 2rem;
-    height: auto;
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.5rem; 
-}
-
-.nav-links a {
-    display: flex;
-    gap: 1rem;
-    color: $light-color;
-    text-decoration: none;
-    font-size: 1rem;
-    text-align: left;
-    transition: color 0.3s ease;
-    font-weight: bold;
-    white-space: nowrap; 
-    padding: 0 10px; 
-}
-
-.nav-links a:hover {
-    color: $secondary-color;
-}
-
-.navbar {
-    min-width: 100vw; 
-}
-.main-content {
-    margin-top: 70px; /* Ajusta según la altura de la navbar */
-}
-
 
 @media (max-width: 768px) {
     .navbar {
@@ -334,7 +349,8 @@ footer {
 }
 
 .tips-section h1, .tips-section h2 {
-    margin-bottom: 20px; // Ajusta el espaciado
+    margin-top: 30px;
+    margin-bottom: 15px; // Ajusta el espaciado
 }
 .tips-section h1{
     font-size: 60px;
@@ -374,15 +390,33 @@ footer {
 @media (max-width: 768px) {
     .tips-section {
         grid-template-columns: repeat(2, 1fr); // Cambiar a 2 columnas en pantallas medianas
-        gap: 15px; // Reducir el espacio entre tarjetas
+        gap: 10px; // Reducir el espacio entre tarjetas
+        h1{
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 5px;
+        }
     }
 }
 
 @media (max-width: 428px) {
     .tips-section {
+        
         grid-template-columns: 1fr; // Cambiar a una columna en pantallas pequeñas
         gap: 10px; // Reducir aún más el espacio entre tarjetas
+        h1{
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 15px;
+        }
     }
+    
+        
+    
 
     .tip-card {
         padding: 10px; // Reducir el espaciado interno para tarjetas pequeñas
