@@ -81,6 +81,7 @@ p.fade-in {
   flex-wrap: nowrap;
   overflow: hidden;
   padding-left: 2rem;
+  height: auto;
 }
 
 .nav-links {
@@ -109,6 +110,42 @@ p.fade-in {
   min-width: 100vw;
 }
 
+.main-content {
+  margin-top: 70px; /* Ajusta según la altura de la navbar */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1.5rem;
+    height: auto; /* 📌 Reduce la altura en móviles */
+  }
+  .main-content {
+    margin-top: 80px; /* 📌 Ajustar según navbar más pequeña */
+  }
+}
+@media (max-width: 468px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    grid-template-columns: 2fr;
+  }
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 📌 Dos columnas */
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .nav-links a {
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .main-content {
+    margin-top: 100px; /* 📌 Ajustar para evitar solapamiento */
+  }
+}
 h1 {
   color: #4c3c63;
 }
