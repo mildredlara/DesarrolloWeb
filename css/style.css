@@ -1,13 +1,121 @@
+@charset "UTF-8";
 body {
   text-align: center;
   margin: 0;
   padding: 0;
+  padding-top: 80px; /* Ajusta este valor según la altura del navbar */
   background-color: #D3C7CF;
   font-family: "Monospace", sans-serif;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  padding-top: 80px; /* Ajusta según la altura del navbar */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logo {
+  animation: spin 1.5s linear;
+}
+
+.logo {
+  height: 60px; /* Ajusta el tamaño del logo */
+  width: auto; /* Mantiene la proporción */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+p.fade-in {
+  animation: fadeIn 1.5s ease-out;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #4c3c63;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px 15px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4c3c63;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding-left: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* 📌 Espaciado entre enlaces */
+}
+
+.nav-links a {
+  display: flex;
+  gap: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: left;
+  transition: color 0.3s ease;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+.nav-links a:hover {
+  color: #5f4a78;
+}
+
+.navbar {
+  min-width: 100vw;
+}
+
 h1 {
   color: #4c3c63;
+}
+
+body {
+  margin-top: 0;
+  padding-top: 70px;
 }
 
 .recipe-container {
@@ -123,16 +231,18 @@ h1 {
 }
 
 footer {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #666;
+  background-color: #4c3c63; /* Fondo morado a juego con el navbar */
+  color: #ffffff; /* Texto blanco para contraste */
   text-align: center;
-  padding: 1rem;
-  background-color: #ffffff;
-  border-top: 1px solid #ddd;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 @media (max-width: 428px) {
+  .navbar {
+    min-width: 428px; /* 📌 Asegura que la barra tenga el ancho completo */
+  }
   .footer-links {
     flex-direction: column;
     align-items: center;
@@ -144,6 +254,9 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .navbar {
+    min-width: 768px; /* 📌 Asegura que la barra tenga el ancho completo */
+  }
   .footer-links {
     gap: 1rem;
   }
@@ -152,24 +265,36 @@ footer {
   }
 }
 .tips-section {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 1200px;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  text-align: center;
+}
+
+.tips-section h1, .tips-section h2 {
+  margin-bottom: 20px;
+}
+
+.tips-section h1 {
+  font-size: 60px;
+  color: #4c3c63;
+  text-align: center;
+}
+
+.tips-section h2 {
+  font-size: 30;
+  color: #5f4a78;
+  text-align: center;
 }
 
 .tip-card {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 10px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px;
 }
 .tip-card:hover {
   transform: scale(1.05);
@@ -258,6 +383,17 @@ main p {
 }
 .contact-form input[type=submit]:hover {
   background-color: #5f4a78;
+}
+
+blockquote {
+  font-style: italic;
+  color: #5a3e85;
+  border-left: 4px solid #8a6cc5;
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {

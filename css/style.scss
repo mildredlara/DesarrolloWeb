@@ -6,23 +6,136 @@ $border-radius: 8px;
 $font-family: 'Monospace', sans-serif;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-
-
 body {
     text-align: center;
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Ajusta este valor según la altura del navbar */
     background-color: $background-color; 
     font-family: $font-family; 
 }
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; // Empuja el footer hacia abajo
+}
+
+header {
+    padding-top: 80px; /* Ajusta según la altura del navbar */
+}
+
+@mixin box-style {
+    background-color: $light-color; 
+    border-radius: $border-radius; 
+    box-shadow: $box-shadow;       
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo {
+    animation: spin 1.5s linear;
+}
+
+.logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    width: auto;  /* Mantiene la proporción */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+p.fade-in {
+    
+    animation: fadeIn 1.5s ease-out;
+    font-size: 1.2rem;  // Tamaño de fuente más grande
+    font-weight: 500;   // Peso de la fuente intermedio para mayor legibilidad
+    color: $primary-color;  // Usa el color principal de tu sitio
+    text-align: center;  // Centra el texto
+    line-height: 1.6;  // Mejora el espacio entre líneas
+    max-width: 800px;  // Limita el ancho del párrafo para mejor lectura
+    margin: 20px auto;  // Centra el párrafo y le da espacio alrededor
+    padding: 10px 15px;  // Agrega algo de espacio interno
+    
+}
+// Estilos para la barra de navegación
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $primary-color;
+    padding: 1rem 2rem;
+    box-shadow: $box-shadow;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    flex-wrap: nowrap; 
+    overflow: hidden; 
+    padding-left: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* 📌 Espaciado entre enlaces */
+}
+
+.nav-links a {
+    display: flex;
+    gap: 1rem;
+    color: $light-color;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: left;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    white-space: nowrap; 
+    padding: 0 10px; 
+}
+
+.nav-links a:hover {
+    color: $secondary-color;
+}
+
+.navbar {
+    min-width: 100vw; 
+}
+
 h1{
     color: $primary-color;
 }
 
-@mixin box-style {
-    background-color: $light-color; // Fondo blanco
-    border-radius: $border-radius; // Bordes redondeados
-    box-shadow: $box-shadow;       // Sombra sutil
+// Ajustes para el cuerpo de la página
+body {
+    margin-top: 0;
+    padding-top: 70px; // Espacio para evitar que el contenido se solape con la barra de navegación
+
 }
 
 .recipe-container {
@@ -119,16 +232,16 @@ h1{
         color: black;
 
         li {
-            margin-bottom: 5px;  // Espaciado entre elementos de la lista
+            margin-bottom: 5px;  
         }
     }
 
     ol {
-        list-style-type: decimal; // Números para la lista ordenada
+        list-style-type: decimal; 
     }
 
     ul {
-        list-style-type: disc;    // Puntos para la lista desordenada
+        list-style-type: disc;    
     }
 }
 
@@ -152,18 +265,25 @@ h1{
     }
 }
 
+
+
 footer {
-    margin-top: 1rem; // Espacio superior
-    font-size: 0.9rem; // Tamaño de fuente ligeramente más pequeño
-    color: #666; // Color gris para el texto del footer
-    text-align: center; // Centrar el texto
-    padding: 1rem; // Espaciado interno
-    background-color: $light-color; // Fondo blanco
-    border-top: 1px solid #ddd; // Línea superior sutil para separar el footer
+    background-color: $primary-color; /* Fondo morado a juego con el navbar */
+    color: #ffffff; /* Texto blanco para contraste */
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
 }
+
 
 // Responsive Design
 @media (max-width: 428px) {
+
+    .navbar {
+        min-width: 428px; /* 📌 Asegura que la barra tenga el ancho completo */
+    }
+
     .footer-links {
         flex-direction: column; // Cambiar a columna en pantallas pequeñas
         align-items: center; // Centrar los enlaces verticalmente
@@ -174,9 +294,15 @@ footer {
         font-size: 0.8rem; // Reducir el tamaño de fuente
         padding: 0.8rem; // Reducir el espaciado interno
     }
-}
 
+    
+    
+}
 @media (max-width: 768px) {
+
+    .navbar {
+        min-width: 768px; /* 📌 Asegura que la barra tenga el ancho completo */
+    }
     .footer-links {
         gap: 1rem; // Ajustar el espacio entre enlaces
     }
@@ -187,25 +313,34 @@ footer {
 }
 
 .tips-section {
-    background-color: $light-color; // Fondo blanco para toda la sección
-    border-radius: $border-radius; // Bordes redondeados para la sección
-    box-shadow: $box-shadow;       // Sombra para resaltar la sección
-    padding: 20px;                 // Espaciado interno
-    max-width: 1200px;             // Ancho máximo de la sección
-    margin: 20px auto;             // Centrar la sección horizontalmente
+    background: none; // ❌ Elimina el fondo blanco
+    box-shadow: none; // ❌ Elimina la sombra
+    padding: 0; // ❌ Reduce el espacio extra
+    text-align: center;
+}
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Diseño en columnas responsivo
-    gap: 20px; // Espacio entre tarjetas
+.tips-section h1, .tips-section h2 {
+    margin-bottom: 20px; // Ajusta el espaciado
+}
+.tips-section h1{
+    font-size: 60px;
+    color: $primary-color;
+    text-align: center;
+}
+.tips-section h2{
+    font-size: 30;
+    color: $secondary-color;
+    text-align: center;
 }
 
 .tip-card {
     background-color: $light-color; // Fondo blanco para cada tarjeta
     border-radius: $border-radius;  // Bordes redondeados
     box-shadow: $box-shadow;        // Sombra ligera para resaltar cada tarjeta
-    padding: 15px;                  // Espaciado interno
+    padding: 10px;                  // Espaciado interno
     text-align: left;               // Alinear el texto a la izquierda
     transition: transform 0.3s ease, box-shadow 0.3s ease; // Animación al pasar el mouse
+    margin: 15px; // Agrega espacio uniforme alrededor de cada tarjeta
 
     &:hover {
         transform: scale(1.05); // Aumentar ligeramente el tamaño al pasar el mouse
@@ -218,6 +353,7 @@ footer {
         line-height: 1.5;         // Mejorar la legibilidad
         margin: 0;                // Eliminar márgenes por defecto
     }
+    
 }
 
 // Responsive Design
@@ -309,6 +445,18 @@ main {
     }
 }
 
+
+blockquote {
+    font-style: italic;
+    color: #5a3e85; 
+    border-left: 4px solid #8a6cc5; 
+    padding: 10px 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
 // Responsive Design
 @media (max-width: 768px) {
     .contact-form {
@@ -334,4 +482,4 @@ main {
     textarea {
         font-size: 0.8rem; // Ajustar el tamaño de fuente para pantallas muy pequeñas
     }
-}
+} 
