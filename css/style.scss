@@ -73,14 +73,14 @@ header {
 p.fade-in {
     
     animation: fadeIn 1.5s ease-out;
-    font-size: 1.2rem;  // Tamaño de fuente más grande
-    font-weight: 500;   // Peso de la fuente intermedio para mayor legibilidad
-    color: $primary-color;  // Usa el color principal de tu sitio
-    text-align: center;  // Centra el texto
-    line-height: 1.6;  // Mejora el espacio entre líneas
-    max-width: 800px;  // Limita el ancho del párrafo para mejor lectura
-    margin: 20px auto;  // Centra el párrafo y le da espacio alrededor
-    padding: 10px 15px;  // Agrega algo de espacio interno
+    font-size: 1.2rem;  
+    font-weight: 500;   
+    color: $primary-color;  
+    text-align: center;  
+    line-height: 1.6;  
+    max-width: 800px;  
+    margin: 20px auto;  
+    padding: 10px 15px;  
     
 }
 // Estilos para la barra de navegación
@@ -104,7 +104,7 @@ p.fade-in {
 
 .nav-links {
     display: flex;
-    gap: 1.5rem; /* 📌 Espaciado entre enlaces */
+    gap: 1.5rem; 
 }
 
 .nav-links a {
@@ -135,11 +135,12 @@ p.fade-in {
 @media (max-width: 768px) {
     .navbar {
         padding: 0.8rem 1.5rem;
-        height: auto; /* 📌 Reduce la altura en móviles */
+        height: auto; /* Reduce la altura */
+        width: 100%;  
     }
 
     .main-content {
-        margin-top: 80px; /* 📌 Ajustar según navbar más pequeña */
+        margin-top: 80px; /* Ajustar según navbar más pequeña */
     }
 }
 
@@ -153,11 +154,12 @@ p.fade-in {
 
     .nav-links {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 📌 Dos columnas */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
         gap: 1rem;
         width: 100%;
         text-align: center;
         justify-content: center;
+        width: 100%;  
     }
 
     .nav-links a {
@@ -166,7 +168,7 @@ p.fade-in {
     }
 
     .main-content {
-        margin-top: 100px; /* 📌 Ajustar para evitar solapamiento */
+        margin-top: 100px; /* Ajustar para evitar solapamiento */
     }
 }
 
@@ -322,39 +324,7 @@ footer {
 
 
 // Responsive Design
-@media (max-width: 428px) {
 
-    .navbar {
-        min-width: 428px; /* 📌 Asegura que la barra tenga el ancho completo */
-    }
-
-    .footer-links {
-        flex-direction: column; // Cambiar a columna en pantallas pequeñas
-        align-items: center; // Centrar los enlaces verticalmente
-        gap: 1rem; // Reducir espacio entre enlaces
-    }
-
-    footer {
-        font-size: 0.8rem; // Reducir el tamaño de fuente
-        padding: 0.8rem; // Reducir el espaciado interno
-    }
-
-    
-    
-}
-@media (max-width: 768px) {
-
-    .navbar {
-        min-width: 768px; /* 📌 Asegura que la barra tenga el ancho completo */
-    }
-    .footer-links {
-        gap: 1rem; // Ajustar el espacio entre enlaces
-    }
-
-    footer {
-        font-size: 0.9rem; // Mantener un tamaño de fuente legible
-    }
-}
 
 .tips-section {
     background: none; // ❌ Elimina el fondo blanco
